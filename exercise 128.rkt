@@ -20,8 +20,12 @@
 
 ; N Number -> Number
 ; Compute the sum of N and an arbitrary number x without using +
+(check-expect (add 5 4) 9)
+(check-expect (add 0 4) 4)
+(check-expect (add 3 0) 3)
+(check-expect (add 14 17) 31)
 
 (define (add n x)
   (cond
-    [(zero? n) ...]
-    [(positive? n) (... (add1 n) ...)]))
+    [(zero? n) x]
+    [(positive? n) (add1 (add (sub1 n) x))]))
