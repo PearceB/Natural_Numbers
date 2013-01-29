@@ -6,3 +6,12 @@
 ; A N (Natural Number) is one of:
 ; - 0
 ; - (add1 N)
+
+; N -> Number
+; compute (+ n pi) without using +
+(check-expect (add-to-pi 3) (+ 3 pi))
+
+(define (add-to-pi n)
+  (cond
+    [(zero? n) ...]
+    [(positive? n) (... (add1 pi) ...)]))
