@@ -17,3 +17,11 @@
   (cond
     [(zero? n) pi]
     [(positive? n) (add1 (add-to-pi (sub1 n)))]))
+
+; N Number -> Number
+; Compute the sum of N and an arbitrary number x without using +
+
+(define (add n x)
+  (cond
+    [(zero? n) ...]
+    [(positive? n) (... (add1 n) ...)]))
